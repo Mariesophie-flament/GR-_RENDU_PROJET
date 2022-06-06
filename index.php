@@ -11,7 +11,7 @@
       Nom d'utilisateur  <br>
       <input type="text" name="nom"><br><br>
       Mot de passe <br>
-      <input type="password" name="password"><br>
+      <input type="password" name="password"><br><br>
       <input type="submit" name="button2" value="Ajouter">  
     </form>
 
@@ -51,7 +51,6 @@
         }*/
 
         echo "<script type='text/javascript'>document.location.replace('layout/dashboard.php');</script>";
-
       } 
     ?>
   </body>
