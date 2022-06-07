@@ -1,4 +1,4 @@
-# GR-_RENDU_PROJET
+# GR2_RENDU_PROJET
 
 
 ### Instructions SQL
@@ -30,7 +30,7 @@
 
     MotDePasse varchar(255) NOT NULL,
 
-    Approuve tinyint(1) NOT NULL;
+    Approuve tinyint(1);
   ) 
 
 ADD PRIMARY KEY (ID);
@@ -69,13 +69,13 @@ ADD PRIMARY KEY (Nom,Prenom);
 
     DatePublication date NOT NULL,
 
-    Editeur varchar(255) DEFAULT NULL,
+    Editeur varchar(255),
 
-    Collection varchar(255) DEFAULT NULL,
+    Collection varchar(255),
 
-    Edition varchar(255) DEFAULT NULL,
+    Edition varchar(255),
 
-    Approuve tinyint(1) DEFAULT NULL;
+    Approuve tinyint(1);
 
   ) 
 
