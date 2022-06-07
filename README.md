@@ -3,7 +3,7 @@
 
 ### Instructions SQL
 
-Base de données Utilisateurs:
+**Base de données Utilisateurs:**
 
 CREATE TABLE `Roles` (
   `ID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
@@ -23,19 +23,19 @@ CREATE TABLE `Utilisateurs` (
 ADD PRIMARY KEY (`ID`);
 ) 
 
-CREATE TABLE `UtilisateursRoles` (
-  `IdUtilisateurs` int(10) UNSIGNED NOT NULL,
-  `IdRoles` int(10) UNSIGNED NOT NULL,
-ADD PRIMARY KEY (`IdUtilisateurs`,`IdRoles`),
-ALTER TABLE `UtilisateursRoles`
-  ADD CONSTRAINT `utilisateursroles_ibfk_1` FOREIGN KEY (`IdUtilisateurs`) REFERENCES `Utilisateurs` (`ID`),
-  ADD CONSTRAINT `utilisateursroles_ibfk_2` FOREIGN KEY (`IdRoles`) REFERENCES `Roles` (`ID`);
+CREATE TABLE UtilisateursRoles (
+  IdUtilisateurs int(10) UNSIGNED NOT NULL,
+  IdRoles int(10) UNSIGNED NOT NULL,
+ADD PRIMARY KEY (IdUtilisateurs,IdRoles),
+ALTER TABLE UtilisateursRoles
+  ADD CONSTRAINT utilisateursroles_ibfk_1 FOREIGN KEY (IdUtilisateurs) REFERENCES Utilisateurs (ID),
+  ADD CONSTRAINT utilisateursroles_ibfk_2 FOREIGN KEY (IdRoles) REFERENCES Roles (ID);
 ) 
 
 
- Base de données Books:
+** Base de données Books:**
 
-CREATE TABLE `Auteurs` (
+CREATE TABLE Auteurs (
   `Nom` varchar(255) NOT NULL,
   `Prenom` varchar(255) NOT NULL,
 ADD PRIMARY KEY (`Nom`,`Prenom`);
