@@ -41,11 +41,12 @@
         <input type="submit" name="Mise a Jour" value="Rechercher"></tr>
     </table>
     </form>
+    <?php 
+    include("check_update.php"); 
+    ?>  
 </body>
 </head>
 </html>
 
-<?php 
-    include("check_update.php"); 
-?>
+
 
