@@ -37,11 +37,12 @@ date datepubli;
 
   
   
-    titre= 'titre';                                                                 //màj des variables pour permettre la Visualisation
-    datepubli= 'datepubli';
-    editeur= 'editeur';
-    collection= 'collection';
-    edition= 'edition';
+    $titre = 'titre';                                                                 
+    //màj des variables pour permettre la Visualisation
+    $datepubli= 'datepubli';
+    $editeur= 'editeur';
+    $collection= 'collection';
+    $edition= 'edition';
 
 
 ?>

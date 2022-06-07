@@ -1,5 +1,5 @@
 body{
-    background-image: url("../img/b.jpg");
+    /**background-image: url("../img/b.jpg");*/
     
 }
 
@@ -14,4 +14,7 @@ form{
     margin-right: auto;
     color: #F7941D;
     font-size: large;
+}
+.erreur{
+    color: red;
 }
