@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $edition = $_POST["Edition"];
     $nom = $_POST["Nom de l'Auteur"];
 
-   
+
     if (!isset($titre)){
       die("S'il vous plaît entrez le titre du livre");
     }
@@ -62,7 +62,7 @@ if (isset($_POST["Mise a Jour"]))
             }
         }
     }
-    
+
     $result = mysqli_query($db_handle, $sql);
     //tester s'il y a de résultat
     if (mysqli_num_rows($result) == 0) {
@@ -98,5 +98,3 @@ else {
 mysqli_close($db_handle);
 
 
-
-?>
