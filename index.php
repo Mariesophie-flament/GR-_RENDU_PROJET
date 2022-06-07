@@ -1,3 +1,7 @@
+<?php
+    @ob_start();
+    session_start();
+    ?>
 <html>
     <head>
         <title>Connexion</title>
@@ -11,18 +15,20 @@
     </head>
 
   <body>
-    <form method="post">
-      Nom d'utilisateur  <br>
-      <input type="text" name="nom"><br><br>
-      Mot de passe <br>
-      <input type="password" name="password"><br><br>
-      <input type="submit" name="button2" value="Ajouter">  
-    </form>
+    <div id="form-validation">
+        <form method="post">
+        Nom d'utilisateur  <br>
+        <input type="text" name="nom"><br><br>
+        Mot de passe <br>
+        <input type="password" name="password"><br><br>
+        <input type="submit" name="submit" value="Entrer">  
+        </form>
+    </div>
+
 
     <?php
       $nom = isset($_POST["nom"])? $_POST["nom"] : "";
       $password= isset($_POST["password"])? $_POST["password"] : "";
-      //$approuve = isset($_POST["approuve"])? $_POST["approuve"] : "";
       if ($nom != "" && $password != "") {
        echo "<h3>" . "Bonjour, $nom. </h3>" . "<br>" ;
  
