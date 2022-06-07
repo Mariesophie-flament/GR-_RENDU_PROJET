@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <link href=".styled {.css" rel="stylesheet" />
+        <link href="style.css" rel="stylesheet" />
     </head>
     <body>
         <strong>
@@ -11,7 +11,7 @@
         <?php echo $collection ?>
         <?php echo $edition ?>
         </strong>
-        <a href="Untitled-1.php">
+        <a href="Bouton.php">
         <input class="favorite styled"
                type="button"
                value="Retour">
