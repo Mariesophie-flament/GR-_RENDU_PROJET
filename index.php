@@ -22,10 +22,42 @@
      if ($nom != "" && $password != "") {
       echo "<h3>" . "Bonjour, $nom. </h3>" . "<br>" ;
 
-      include('script/bdd_users_connect.php'); 
+      //include('script/bdd_users_connect.php'); 
      
-        
-      
+      $database = "Utilisateurs";
+      $db_handle = mysqli_connect('localhost', 'root', '' );
+      $db_found = mysqli_select_db($db_handle, $database);
+      if(! $db_found) {
+        die('Could not connect:' . mysqli_connect_error());
+      }
+      else{
+        $sql = "SELECT Nom, MotDePasse, Approuve FROM Utilisateurs";
+        $result = mysqli_query($db_handle, $sql);
+        while ($data = mysqli_fetch_array($result, 2)) {
+          echo "Nom :{$data[0]}  <br> ".
+          "Mot de passe : {$data[1]} <br> ";
+        }
+        $logs = array(
+          data[0] => data[1]
+        );
+        $connexion = false;
+        for ($i = 0; $i < count($logs); $i++) {
+          if ($logs[$nom] == $password) {
+            $connexion = true;
+            break;
+          }
+          else if (! $logs[$nom] == $password){
+            echo "<p class='erreur'>Le mot de passe n'est pas valide</p>";
+          }
+          else if(! $logs[$nom]){
+            echo "<p class='erreur'>L'utilisateur n'existe pas</p>";
+            echo "<script type='text/javascript'>document.location.replace('layout/create_users.php');</script>";
+          }
+        }
+        if ($connexion) {
+          echo "Connexion okay.";
+          echo "<script type='text/javascript'>document.location.replace('layout/dashboard.php');</script>";         
+        } 
     }
     ?>
   </body>
