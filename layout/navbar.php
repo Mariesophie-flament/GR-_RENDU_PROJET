@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
   <head>
     <title>Barre de Navigation</title>
@@ -9,11 +8,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../assets/css/barre.css"> 
   </head>
-
-
   <body>
     <nav class="navbar navbar-expand-md">
-
       <img src="../assets/img/logo.jpg" width="50" height ="50"/>
       <a class="navbar-brand" href="#">Entreprise A</a>
         <div class="collapse navbar-collapse" id="main-navigation">
@@ -38,7 +34,6 @@
         </ul>
         </div>
         <li><a href="../index.php"><input class ="favorite styled" type="button" value="Déconnexion"></a></li>  <!--METTRE LIEN -->
-
     </nav>
   </body>
-</html>
+</html> 
