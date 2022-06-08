@@ -1,21 +1,18 @@
 <?php
+$servername = "localhost"; //127.0.0.1
+$bddname = "Books";
+$user = "root";
+$password = "root";
 
-$servername = "localhost"; 
-$dbname = "Books"; 
-$user = "root"; 
-$password = "root"; 
-
-try{
-
-    $connexion = new PDO("mysql:host=".$servername. ";dbname=".$dbname, $user, $password);
-}
-
-catch(PDOException $e){
-    
-    echo "<p> Un problème est survenu lors de la connexion";
-    echo "<span>" .$e . "</span></p>";
+try {
+    $connexion = new PDO("mysql:host=" . $servername . ";dbname=" . $bddname, $user, $password);
+} catch (PDOException $exception) {
+    echo "<p>Un problème est survenue lors de la connexion:";
+    echo "<span>" . $exception . "</span></p>";
     die();
-
 }
+
+
+
 
 ?>
