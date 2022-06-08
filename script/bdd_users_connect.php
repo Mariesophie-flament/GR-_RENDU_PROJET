@@ -1,18 +1,18 @@
 <?php
+$servername = "localhost"; //127.0.0.1
+$bddname = "Utilisateurs";
+$user = "root";
+$password = "root";
 
-    $servername = "localhost"; 
-    $dbname = "Utilisateurs"; 
-    $user = "root"; 
-    $password = ""; 
+try {
+    $connexion = new PDO("mysql:host=" . $servername . ";dbname=" . $bddname, $user, $password);
+} catch (PDOException $exception) {
+    echo "<p>Un problème est survenue lors de la connexion:";
+    echo "<span>" . $exception . "</span></p>";
+    die();
+}
 
-    try{
-        $connexion = new PDO("mysql:host=".$servername. ";dbname=".$dbname, $user, $password);
-        foreach ($connexion->query('SELECT * FROM Utilisateurs') as $row){
-            print_r($row);
-        }
-    }catch(PDOException $e){
-        print "Erreur!:" . $e->getMessage() ." <br/>" ;
-        die();
-    }
+
+
+
 ?>
-
