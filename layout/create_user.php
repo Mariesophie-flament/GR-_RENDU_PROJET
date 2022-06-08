@@ -10,13 +10,13 @@
   </head>
   <body>
     <form method="post">
-      Pseudo : <input type="text" name="pseudo" placeholder="Entrez votre pseudo" /><br />
-      Nom : <input type="text" name="nom" placeholder="Entrez votre nom" /><br />
-      Prénom : <input type="text" name="prenom" placeholder="Entrez votre prenom" /><br />
-      Date de Naissance : <input type="date" name="datenaissance" placeholder="Entrez votre date de naissance" /><br />
-      Adresse Mail : <input type="text" name="adressemail" placeholder="Entrez votre adresse mail" /><br />
-      Mot de Passe : <input type="password" name="motdepasse" placeholder="Entrez un mot de passe" /><br />
-      <input type="submit" value="Submit" />
+      Pseudo  <input type="text" name="pseudo" /><br />
+      Nom  <input type="text" name="nom"  /><br />
+      Prénom  <input type="text" name="prenom" /><br />
+      Date de Naissance  <input type="date" name="datenaissance"  /><br />
+      Adresse Mail  <input type="text" name="adressemail" /><br />
+      Mot de Passe  <input type="password" name="motdepasse"  /><br /><br>
+      <input type="submit" value="Créer" />
     </form>
   </body>
 </html>
@@ -37,7 +37,7 @@
         ('$pseudo', '$nom', '$prenom', '$datenaissance', '$adressemail', '$motdepasse',1)";
         $result_search = executeQuery($connexion, $sql);
 
-        echo "<script type='text/javascript'>document.location.replace('../index.php');</script>"; 
+        echo "<script type='text/javascript'>document.location.replace('../ind.php');</script>"; 
 
     }
 ?>
