@@ -1,0 +1,43 @@
+<html>
+    <head>
+    <title>Formulaire d'inscription</title>
+    <link href="../assets/css/form.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../assets/js/vue-form-create-utilisateur.js" async></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  </head>
+  <body>
+    <form method="post">
+      Pseudo : <input type="text" name="pseudo" placeholder="Entrez votre pseudo" /><br />
+      Nom : <input type="text" name="nom" placeholder="Entrez votre nom" /><br />
+      Prénom : <input type="text" name="prenom" placeholder="Entrez votre prenom" /><br />
+      Date de Naissance : <input type="date" name="datenaissance" placeholder="Entrez votre date de naissance" /><br />
+      Adresse Mail : <input type="text" name="adressemail" placeholder="Entrez votre adresse mail" /><br />
+      Mot de Passe : <input type="password" name="motdepasse" placeholder="Entrez un mot de passe" /><br />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
+
+  <?php
+  include('../script/utils.php');
+  include('../script/bdd_users_connect.php');
+  
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $pseudo = isset($_POST["pseudo"])? $_POST["pseudo"] : "";
+        $nom= isset($_POST["nom"])? $_POST["nom"] : "";
+        $prenom = isset($_POST["prenom"])? $_POST["prenom"] : "";
+        $datenaissance= isset($_POST["datenaissance"])? $_POST["datenaissance"] : "";
+        $adressemail = isset($_POST["adressemail"])? $_POST["adressemail"] : "";
+        $motdepasse= isset($_POST["motdepasse"])? $_POST["motdepasse"] : "";
+
+        $sql = "INSERT INTO `Utilisateurs` (`Pseudo`, `Nom`, `Prenom`, `DateNaissance`, `AdresseElectronique`, `MotDePasse`, `Approuve`) VALUES
+        ('$pseudo', '$nom', '$prenom', '$datenaissance', '$adressemail', '$motdepasse',1)";
+        $result_search = executeQuery($connexion, $sql);
+
+        echo "<script type='text/javascript'>document.location.replace('../ind.php');</script>"; 
+
+    }
+?>
