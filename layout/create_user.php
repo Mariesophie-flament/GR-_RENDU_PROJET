@@ -37,7 +37,7 @@
         ('$pseudo', '$nom', '$prenom', '$datenaissance', '$adressemail', '$motdepasse',1)";
         $result_search = executeQuery($connexion, $sql);
 
-        echo "<script type='text/javascript'>document.location.replace('../ind.php');</script>"; 
+        echo "<script type='text/javascript'>document.location.replace('../index.php');</script>"; 
 
     }
 ?>
