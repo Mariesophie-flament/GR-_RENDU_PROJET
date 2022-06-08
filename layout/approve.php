@@ -12,15 +12,23 @@
 
   <body>
     <div id="col">
+        <?php include('../script/AfficheNom.php') ?>
         <form method="post">
         <input type="checkbox" name="user"><br><br>
-        <input type="submit" name="user" value="Approuver">  
         </form>
 
         <form method="post">
         <input type="checkbox" name="livre"><br><br>
-        <input type="submit" name="livre" value="Approuver">  
         </form>
     </div>
 </body>
 </html>
+
+
+
+<input type="submit" name="livre" value="Approuver">  
+
+
+if (aria-checked="true") {
+    
+}
