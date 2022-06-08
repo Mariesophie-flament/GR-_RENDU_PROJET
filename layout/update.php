@@ -1,45 +1,23 @@
 <html>
 <head>
-       <title>MISE A JOUR </title>
+       <title>Mise à jour</title>
        <meta charset="utf-8">
+    <link href="../assets/css/dashboard.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/css/form.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 </head>
 <body>
-
-// Mettre dans dossier layout 
-
-    <form action="update.php" method="post">
-    <table> 
-        <tr>
-            <td>Titre:</td>
-            <td><input type="text" name="Titre"></td>
-        </tr>
-        <tr>
-            <td>Date de Publication :</td>
-            <td><input type="text" name="DateDePublication"></td>
-        </tr>
-        <tr>
-            <td>Editeur:</td>
-            <td><input type="text" name="Editeur"></td>
-        </tr>
-        <tr>
-            <td>Collection:</td>
-            <td><input type="text" name="Collection"></td>
-        </tr>
-        <tr>
-            <td>Edition:</td>
-            <td><input type="text" name="Edition"></td>
-        </tr>
-        <tr>
-            <td>Nom:</td>
-            <td><input type="text" name="Nom"></td>
-        </tr>
-        <tr>
-            <td>Prenom:</td>
-            <td><input type="text" name="Prenom"></td>
-        </tr>
-        <tr>
-        <input type="submit" name="Mise a Jour" value="Rechercher"></tr>
-    </table>
+    <form method="post" action="update.php">                                                  
+      Titre  <input type="text" name="Titre"  /><br />
+      Date de publication <input type="date" name="DatePublication" /><br />
+      Editeur <input type="text" name="Editeur" /><br />
+      Collection  <input type="text" name="Collection" /><br />
+      Edition  <input type="text" name="Edition"  /><br />
+      Nom de l'auteur  <input type="text" name="NomAuteur" /><br /><br>
+      <input type="submit" name="MAJ" value="Rechercher">
     </form>
     <?php 
     include("check_update.php"); 
