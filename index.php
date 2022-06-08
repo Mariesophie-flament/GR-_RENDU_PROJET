@@ -25,9 +25,6 @@
                 else if($nom == $row["Nom"] && $pass != $row["MotDePasse"]){
                     echo "<p class='erreur'>Le mot de passe n'est pas valide</p>";
                 }
-                else {
-                    echo "<p class='erreur'> L'utilisateur n'existe pas </p>";
-                }
             }
         } 
          if ($connexion) {
