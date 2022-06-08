@@ -1,0 +1,21 @@
+body{
+    background-image: url("../img/b.jpg");
+    
+}
+
+form{
+    width: 260px;
+    height:460px;
+    padding: 20px;
+    margin-top:12vh; 
+    border: 4px solid black;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: #F7941D;
+    font-size: large;
+    background-color: white;
+}
+.erreur{
+    color: red;
+}
