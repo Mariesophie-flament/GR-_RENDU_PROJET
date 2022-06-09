@@ -129,8 +129,12 @@ ADD PRIMARY KEY (Titre,DatePublication);
   
   **Liens + Documentations :** 
   
+  Cours sur le campus. 
+  
   https://www.php.net/manual/fr/mysqli.quickstart.multiple-statement.php
+  
   https://leblogducodeur.fr/les-sessions-en-php/#:~:text=Les%20sessions%20PHP%20%3A%20utiliser%20la%20fonction%20isset&text=Cette%20dernière%2C%20qui%20s'utilise,la%20variable%20existe%20ou%20non.
+  
   https://pixabay.com/fr/photos/palais-national-de-mafra-5118010/
   
   ### Dashboard 
@@ -149,6 +153,8 @@ ADD PRIMARY KEY (Titre,DatePublication);
   De même pour le Update qui nous redirige vers une page de mise à jour, et l'approbation où on peut approuver des utlisateurs pas encore approuvé. 
   
   **Liens + Documentations :** 
+  
+  Cours sur le campus + TP
   
   https://developer.mozilla.org/fr/docs/Web/HTML/Element/Input/radio
   
@@ -169,6 +175,7 @@ ADD PRIMARY KEY (Titre,DatePublication);
   **Liens + Documentations :** 
   
   https://www.pierre-giraud.com/bootstrap-apprendre-cours/barre-navigation/
+  
   https://bootstrap-top-design.com/realiser-barre-de-navigation-bootstrap/
   
   ### Déconnexion 
@@ -201,6 +208,7 @@ ADD PRIMARY KEY (Titre,DatePublication);
   **Liens + Documentations :** 
   
   https://www.w3schools.com/php/php_mysql_insert.asp
+  
   https://fr.vuejs.org/v2/guide/components.html
   
   ### Mise à jour/ Lecture/ Suppresion d'un enregistrement 
