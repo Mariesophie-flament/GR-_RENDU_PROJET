@@ -125,3 +125,5 @@ Vue.component('submit', {
 var validation = new Vue({
     el: "#app-validation"
 })
+
+var valeur =document.querySelector('input[name="bouton"]:checked').value;
