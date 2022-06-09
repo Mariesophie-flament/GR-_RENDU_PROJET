@@ -7,72 +7,17 @@
     </head>
 
     <body>
-        // Inclure dans dashboard.php ce dossier
-        // Reussir à supprimer la bonne table dans la base de données 
-        <table>
-        <tbody>
-            <form method="get" action="dashboard.php">
-                <!-- Faire une boucle for pour mettre tout les Id de la Base de données sous forme de boutons radios
-                De plus, voir si les boutons submit sont avec pu sur une autre page  -->
-                <tr>
-                    <td> 
-                        
-                    <!-- 1ER ID-->
-                    <div>
-                        <input type="radio" name="drone" value="1">
-                        <label for="1"> 1er Id</label>
-                    </div>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td> 
-                    <!-- 2EME ID-->
-                    <div>
-                        <input type="radio" name="drone" value="2">
-                        <label for="2"> 2e Id</label>
-                    </div>
-                    </td>
-                </tr>
-
-                <td>
-                    <div>
-                    <input type="submit" value="Update">
-                    </div>
-                </td>
-
-                <td>
-                    <div>
-                        <input type="submit" value="Read">
-                    </div>
-                </td>
-
-                <td>
-                    <div>
-                        <input type="submit" name="SubmitDelete" value="Delete">
-                    </div>
-                </td>
-
-            </form>
-
-        </tbody>
+        // Reussir à supprimer la bonne table dans la base de données
+            <form method="post" action="dashboard.php">
         
-
-    </table>
     <?php
 
-    $sql="SELECT COUNT(*) AS $recuperation FROM Livres";
-    echo($recuperation); // VOIR SI CA MARCHE A VIRER
+    include("dashboard.php"); 
 
-    foreach($i=0; $i<$recuperation; $i++){                  // mysqli_num_rows()
-         <input type="radio" name="drone" value=$i>
-         <label for="1"> 1er Id</label>
-            
-    }
+    $sql="SELECT COUNT(*) AS $recuperation FROM Livres ";
+    echo($recuperation); // VOIR SI CA MARCHE A VIRER
     
-    
-    
-    if(isset ($_POST["SubmitDelete"])){
+    /*if(isset ($_POST["SubmitDelete"])){
         $selected_radio = $_POST['drone']; 
 
         if($selected_radio == '1'){
@@ -82,25 +27,41 @@
         else if($selected_radio == '2'){
             $sql="DELETE FROM Books.Livres WHERE id = '2'"
         }
-    }
+    }*/
 
-    
+    if (isset($_POST['Delete'])) {
+        $sql = "SELECT * FROM Books";
+            if ($titre != "") {
+                $sql .= " WHERE Titre LIKE '%$titre%'"; if ($nomauteur != "") {
+                $sql .= " AND IdAuteurs LIKE '%$nomauteur%'";
+            } }
+            if (mysqli_num_rows($result_search) == 0) {
+            //Livre inexistant
+                echo "Cannot delete. Book not found. <br>"; } 
+            
+            else {
+                while ($data = mysqli_fetch_assoc($result_search) ) { 
+                    $id = $data['ID'];
+                    echo "<br>"; }
+                $sql = "DELETE FROM Books";
+                $sql .= " WHERE ID = $id"; 
+                echo "Delete successful. <br>";
 
+                //on affiche les autres livres dans la BDD
+                $sql = "SELECT * FROM Books";
 
+                echo "Les livres dans notre bibliothèque: <br>"; 
 
+                while ($data = mysqli_fetch_assoc($result_search)) {
+                    echo "ID: " . $data['ID'] . "<br>";
+                } 
+            }
+            echo "Titre: " . $data['Titre'] . "<br>"; echo "Prenom : " . $data['Prenom'] . "<br>"; echo "IdAuteurs: " . $data['IdAuteurs'] . "<br>"; 
+            echo "DatePublication: " . $data['DatePublication'] . "<br>"; echo "Editeur: " . $data['Editeur'] . "<br>"; 
+            echo "Edition: " . $data['Edition'] . "<br>";echo "Collection: " . $data['Collection'] . "<br>"; echo "<br>";
     ?>
-    
-
-
 
     </body>     
-
-
-
-
-
-
-
 
 </html>
 
