@@ -21,6 +21,8 @@
             foreach ($result_search as $row) {
                 /** Faire joli */
                 echo "<tr>";
+                ?> <td><input type="radio" name="drone" value="<?php $result_search?>"> <br/></td>
+                <?php
                 echo "<td>" . $row["IdLivres"] . "</td>";
                 echo "<td>" . "<br> " . "</td>";
                 echo "<td>" . "-" . "</td>";
@@ -32,6 +34,29 @@
                 echo "<td>" . $row["Editeur"] . "</td>";
                 
                 echo "</tr>";
+                ?> 
+                <td>
+                    <div>
+                    <input type="submit" value="Update">
+                    <?php include("udpate.php")?>
+                    </div>
+                </td>
+
+                <td>
+                    <div>
+                        <input type="submit" value="Read">
+                    </div>
+                </td>
+
+                <td>
+                    <div>
+                        <input type="submit" name="SubmitDelete" value="Delete">
+                        <?php $sql="DELETE FROM 'Livres' WHERE id =$drone"?>
+                    </div>
+                </td>
+
+                <?php
+
             }
             echo "</table>";
         } else {
@@ -53,6 +78,7 @@
   </head>
 
   <body>
+      <form method="post" action="dashboard.php">
      
   </body>
 </html>
