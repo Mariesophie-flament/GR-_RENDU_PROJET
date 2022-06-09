@@ -34,7 +34,9 @@
                 echo "<td>" . $row["Editeur"] . "</td>";
                 
                 echo "</tr>";
-                ?> 
+            }
+
+            ?> 
                 <td>
                     <div>
                     <input type="submit" value="Update">
@@ -88,7 +90,6 @@
 
                 <?php
 
-            }
             echo "</table>";
         } else {
             echo "<p> Aucun résultats trouvés. </p>";
