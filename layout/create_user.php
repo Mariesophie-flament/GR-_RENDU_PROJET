@@ -16,7 +16,7 @@
       Date de Naissance  <input type="date" name="datenaissance"  /><br />
       Adresse Mail  <input type="text" name="adressemail" /><br />
       Mot de Passe  <input type="password" name="motdepasse"  /><br /><br>
-      <input type="submit" value="Créer" />
+      <input type="submit" style="color : #fff; background-color: #B12A50" value="Créer" />
     </form>
   </body>
 </html>
@@ -33,8 +33,8 @@
         $adressemail = isset($_POST["adressemail"])? $_POST["adressemail"] : "";
         $motdepasse= isset($_POST["motdepasse"])? $_POST["motdepasse"] : "";
 
-        $sql = "INSERT INTO `Utilisateurs` (`Pseudo`, `Nom`, `Prenom`, `DateNaissance`, `AdresseElectronique`, `MotDePasse`, `Approuve`) VALUES
-        ('$pseudo', '$nom', '$prenom', '$datenaissance', '$adressemail', '$motdepasse',1)";
+        $sql = "INSERT INTO `Utilisateurs` (`Pseudo`, `Nom`, `Prenom`, `DateNaissance`, `AdresseElectronique`, `MotDePasse`) VALUES
+        ('$pseudo', '$nom', '$prenom', '$datenaissance', '$adressemail', '$motdepasse')";
         $result_search = executeQuery($connexion, $sql);
 
         echo "<script type='text/javascript'>document.location.replace('../ind.php');</script>"; 
