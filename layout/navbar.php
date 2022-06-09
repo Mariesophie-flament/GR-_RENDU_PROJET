@@ -26,7 +26,7 @@
 
         </ul>
         </div>
-        <a href="../ind.php"><input class ="favorite styled" type="button" value="Déconnexion"></a>  <!--METTRE LIEN -->
+        <a href="../index.php"><input class ="favorite styled" type="button" value="Déconnexion"></a>  
         <div id="top-navbar"></div>
 
     </nav>
