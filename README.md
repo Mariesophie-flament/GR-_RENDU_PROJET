@@ -130,7 +130,7 @@ ADD PRIMARY KEY (Titre,DatePublication);
   **Liens + Documentations :** 
   
   https://www.php.net/manual/fr/mysqli.quickstart.multiple-statement.php
-  https://leblogducodeur.fr/les-sessions-en- php/#:~:text=Les%20sessions%20PHP%20%3A%20utiliser%20la%20fonction%20isset&text=Cette%20dernière%2C%20qui%20s'utilise,la%20variable%20existe%20ou%20non.
+  https://leblogducodeur.fr/les-sessions-en-php/#:~:text=Les%20sessions%20PHP%20%3A%20utiliser%20la%20fonction%20isset&text=Cette%20dernière%2C%20qui%20s'utilise,la%20variable%20existe%20ou%20non.
   https://pixabay.com/fr/photos/palais-national-de-mafra-5118010/
   
   ### Dashboard 
@@ -185,6 +185,7 @@ ADD PRIMARY KEY (Titre,DatePublication);
   **Liens + Documentations :** 
   
   Cours sur le campus. 
+  
   http://www.lephpfacile.com/manuel-php/function.session-destroy.php
   
   ### Création d'un enregistrement 
