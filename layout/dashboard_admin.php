@@ -11,7 +11,7 @@ echo("<br>");
     <!-- BOUTON UPDATE DELETE ET READ -->
     <a href="update.php" text-align="center"><button style="color : #fff; background-color: #002D72"> Update </button></a>   
     <input type="submit" style="color : #fff; background-color: #002D72" value="Read">
-    <input type="submit" style="color : #fff; background-color: #DA291C" value="Delete">
+    <a href="delete_admin.php" text-align="center"><button style="color : #fff; background-color: #DA291C" >Delete</button></a> 
 
     <?php include('../script/delete_book.php')?>
 </div>
