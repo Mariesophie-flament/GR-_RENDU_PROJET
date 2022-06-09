@@ -1,5 +1,23 @@
-#col {
-    column-count: 2;
-    margin-top: 15vh; 
-    margin-left: 400px;
-  }
+.marge{
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align:center;
+}
+
+.form{
+  width: 260px;
+  height:160px;
+  padding: 20px;
+  margin-top:7vh; 
+  border: 4px solid black;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  color: #F7941D;
+  font-size: large;
+  background-color: white;
+}
+
+.valide{
+  color:green;
+}
