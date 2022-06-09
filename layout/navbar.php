@@ -18,15 +18,15 @@
         <div class="collapse navbar-collapse" id="main-navigation">
         <ul class="navbar-nav">
 
-          <li class="nav-item"><a class="nav-link " href="#">Connexion</a></li>
-          <li class="nav-item"><a class="nav-link " href="#">Inscription</a></li>
-          <li class="nav-item"><a class="nav-link " href="#">Enregistrement</a></li> 
-          <li class="nav-item"><a class="nav-link " href="#">Mise à jour</a></li>
-          <li class="nav-item"><a class="nav-link " href="#">Suppression</a></li>
+          <!--<li class="nav-item"><a class="nav-link " href="#">Connexion</a></li>-->
+          <!--<li class="nav-item"><a class="nav-link " href="#">Inscription</a></li>-->
+          <li class="nav-item"><a class="nav-link " href="creation.php">Enregistrement</a></li> 
+          <!--<li class="nav-item"><a class="nav-link " href="update.php">Mise à jour</a></li>-->
+          <!--<li class="nav-item"><a class="nav-link " href="../script/delete_book.php">Suppression</a></li>-->
 
         </ul>
         </div>
-        <a href="../index.php"><input class ="favorite styled" type="button" value="Déconnexion"></a>  <!--METTRE LIEN -->
+        <a href="../ind.php"><input class ="favorite styled" type="button" value="Déconnexion"></a>  <!--METTRE LIEN -->
         <div id="top-navbar"></div>
 
     </nav>
