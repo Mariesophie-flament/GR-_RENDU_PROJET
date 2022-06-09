@@ -10,21 +10,42 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 </head>
 <body>
-    <form method="post" action="update.php">                                                  
-      Titre  <input type="text" name="Titre"  /><br />
-      Date de publication <input type="date" name="DatePublication" /><br />
-      Editeur <input type="text" name="Editeur" /><br />
-      Collection  <input type="text" name="Collection" /><br />
-      Edition  <input type="text" name="Edition"  /><br />
-      Nom de l'auteur  <input type="text" name="NomAuteur" /><br /><br>
-      <input type="submit" name="MAJ" value="Rechercher">
+    <form method="post">                                                  
+      Titre  <input type="text" name="titre"  /><br />
+      Date de publication <input type="date" name="datepub" /><br />
+      Editeur <input type="text" name="editeur" /><br />
+      Collection  <input type="text" name="collection" /><br />
+      Edition  <input type="text" name="edition"  /><br />
+      Nom de l'auteur  <input type="text" name="nomauteur" /><br />
+      Prénom de l'auteur  <input type="text" name="prenomauteur" /><br /><br>
+      <a href="dashboard.php" text-align="center"><button style="color : #fff; background-color: #B12A50" >Mettre à jour</button></a>
     </form>
-    <?php 
-    include("check_update.php"); 
-    ?>  
 </body>
 </head>
 </html>
 
+<?php
+  include('../script/utils.php');
+  include('../script/bdd_livres_connect.php');
+  include('../script/check_update.php');
 
+  $titre = isset($_POST["titre"])? $_POST["titre"] : "";
+  $datepub= isset($_POST["datepub"])? $_POST["datepub"] : "";
+  $editeur = isset($_POST["editeur"])? $_POST["editeur"] : "";
+  $collection= isset($_POST["collection"])? $_POST["collection"] : "";
+  $edition = isset($_POST["edition"])? $_POST["edition"] : "";
+  $nomauteur= isset($_POST["nomauteur"])? $_POST["nomauteur"] : "";
+  $prenomauteur= isset($_POST["prenomauteur"])? $_POST["prenomauteur"] : "";
+
+  $sql = "UPDATE `Livres` SET `DatePublication`= '$datepub',`Editeur`='$editeur', `Collection`= '$collection', `Edition` = '$edition'
+  WHERE `Titre` = '$titre' ";
+  $result_search = executeQuery($connexion, $sql);
+  $sql = "UPDATE `Auteurs` SET `Nom= '$nomauteur'
+  WHERE `Prenom` = '$prenomauteur' ";
+  $result_search = executeQuery($connexion, $sql);
+  $sql = "UPDATE `LivresAuteurs` SET `IdAuteurs`= '$nomauteur'
+  WHERE `IdLivres` = '$titre' ";
+  $result_search = executeQuery($connexion, $sql);
+
+?>
 
