@@ -99,3 +99,14 @@ ADD PRIMARY KEY (Titre,DatePublication);
   ADD CONSTRAINT livresauteurs_ibfk_1 FOREIGN KEY (IdLivres) REFERENCES Livres (Titre);
   
   ADD CONSTRAINT livresauteurs_ibfk_2 FOREIGN KEY (IdAuteurs) REFERENCES Auteurs (Nom);
+  
+  
+  ### Les Différentes Fonctionnalités 
+  
+  # Connexion 
+  
+  ** Problèmes rencontrés** 
+  
+  Difficulté dans la connexion entre le code et la base de données 
+  
+  
