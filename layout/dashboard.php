@@ -43,8 +43,39 @@
                 </td>
 
                 <td>
-                    <div>
+                    <div id="readpopup">
                         <input type="submit" value="Read">
+                        <?php 
+                            if(isset($_POST ["Read"])){
+                                
+                                echo "<td>" . $row["IdLivres"] . "</td>";
+                                echo "<td>" . "<br> " . "</td>";
+                                echo "<td>" . "-" . "</td>";
+                                echo "<td>" . "<br>" . "</td>";
+                                echo "<td>" . $row["Prenom"] . "</td>";
+                                echo "<td>" . "<br> " . "</td>";
+                                echo "<td>" . "-" . "</td>";
+                                echo "<td>" . "<br>" . "</td>";
+                                echo "<td>" . $row["IdAuteurs"] . "</td>";
+                                echo "<td>" . "<br> " . "</td>";
+                                echo "<td>" . "-" . "</td>";
+                                echo "<td>" . "<br>" . "</td>";
+                                echo "<td>" . $row["Editeur"] . "</td>";
+                                echo "<td>" . "<br> " . "</td>";
+                                echo "<td>" . "-" . "</td>";
+                                echo "<td>" . "<br>" . "</td>";
+                                echo "<td>" . $row["DatePublication"] . "</td>";
+                                echo "<td>" . "<br> " . "</td>";
+                                echo "<td>" . "-" . "</td>";
+                                echo "<td>" . "<br>" . "</td>";
+                                echo "<td>" . $row["Edition"] . "</td>";
+                                echo "<td>" . "<br> " . "</td>";
+                                echo "<td>" . "-" . "</td>";
+                                echo "<td>" . "<br>" . "</td>";
+                                echo "<td>" . $row["Collection"] . "</td>";
+                            }
+                        ?>
+
                     </div>
                 </td>
 
