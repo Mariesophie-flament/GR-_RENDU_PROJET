@@ -8,18 +8,6 @@
 
     <body>
     <?php
-    
-    /*if(isset ($_POST["SubmitDelete"])){
-        $selected_radio = $_POST['drone']; 
-
-        if($selected_radio == '1'){
-            $sql="DELETE FROM Books.Livres WHERE id = '1'"
-        }
-
-        else if($selected_radio == '2'){
-            $sql="DELETE FROM Books.Livres WHERE id = '2'"
-        }
-    }*/
 
     if (isset($_POST['Delete'])) {
         $sql = "SELECT * FROM Books";
@@ -27,17 +15,18 @@
             $sql .= " WHERE Titre LIKE '%$titre%'"; 
         }
         if (mysqli_num_rows($result_search) == 0) {
-        //Livre inexistant
+        //LIVRE INEXISTANT
         echo "Cannot delete. Book not found. <br>"; } 
         else {
             while ($data = mysqli_fetch_assoc($result_search) ) { 
                 $id = $data['ID'];
                 echo "<br>"; }
+        // ON SUPPRIME L ELEMENT
         $sql = "DELETE FROM Books WHERE ID = valeur"; 
 
         echo "Delete successful. <br>";
 
-        //on affiche les autres livres dans la BDD
+        //ON AFFICHE LES AUTRES LIVRES DANS LA BDD
         $sql = "SELECT * FROM Books";
 
         while ($data = mysqli_fetch_assoc($result_search)) {
@@ -52,14 +41,10 @@
             echo "<br>";
         } 
         }
+    }
     echo "</table>";
     ?>
 
     </body>     
 
 </html>
-
-
-
-
-
