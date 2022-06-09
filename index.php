@@ -4,7 +4,7 @@
      $nom = isset($_POST["nom"])? $_POST["nom"] : "";
      $pass= isset($_POST["pass"])? $_POST["pass"] : "";
      if ($nom != "" && $pass != "") {
-		include('script/utils.php');
+		    include('script/utils.php');
         include('script/bdd_users_connect.php'); 
 	  
 	    $sql = "SELECT Nom, MotDePasse FROM Utilisateurs";
@@ -27,10 +27,14 @@
                 }
             }
         } 
-         if ($connexion) {
+         if ($connexion && $nom=="Administrateur") {
            echo "Connexion okay.";
-           echo "<script type='text/javascript'>document.location.replace('layout/dashboard.php');</script>";         
+           echo "<script type='text/javascript'>document.location.replace('layout/dashboard_admin.php');</script>";         
          } 
+         else if ($connexion && $nom!="Administrateur"){
+          echo "Connexion okay.";
+          echo "<script type='text/javascript'>document.location.replace('layout/dashboard.php');</script>";   
+         }
          else{
             echo "<script type='text/javascript'>document.location.replace('layout/create_user.php');</script>"; 
          }
@@ -59,7 +63,7 @@
         <input type="text" name="nom"><br><br>
         Mot de passe <br>
         <input type="password" name="pass"><br><br>
-        <input type="submit" name="submit" value="Entrer">  
+        <input type="submit" name="submit" style="color : #fff; background-color: #B12A50" value="Entrer">  
         </form>
     </div>
 
