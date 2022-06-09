@@ -38,7 +38,7 @@
         include('../script/bdd_livres_connect.php'); 
         
         // AFFICHAGE DU TITRE, EDITEUR ET NOM DE L'AUTEUR LIEN AVEC LA TABLE DE JOINTURE    
-        $sql = "SELECT * FROM  LivresAuteurs LEFT JOIN Livres ON LivresAuteurs.IdLivres = Livres.titre";
+        $sql = "SELECT * FROM  LivresAuteurs LEFT JOIN Livres ON LivresAuteurs.IdLivres = Livres.titre ORDER BY IdAuteurs ";
 	    $result_search = executeQuery($connexion, $sql);
         
         if (!$result_search) {
