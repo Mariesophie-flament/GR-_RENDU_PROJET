@@ -10,15 +10,11 @@
   </head>
 
   <body>
-    <div >
+    <div class ="marge">
         <form method="post">
         Titre du livre 
         <input type="text" name="titre">
-        Nom de l'auteur 
-        <input type="text" name="auteur">
-        Date de publication
-        <input type="date" name="date">
-        <input type="submit" name="Rechercher" value="Rechercher">  
+        <input type="submit" name="Rechercher" style="color : #fff; background-color: #002D72"value="Rechercher">  
         </form>
     </div>
   </body>
@@ -26,38 +22,29 @@
 
 
 <?php
-/* 
-    $titre = isset($_POST["titre"])? $_POST["titre"] : "";
-    $auteur= isset($_POST["auteur"])? $_POST["auteur"] : "";
-    $date = isset($_POST["date"])? $_POST["date"] : "";
-    if ($titre != "" && $auteur != "") {
+  $titre = isset($_POST["titre"])? $_POST["titre"] : "";
+    if ($titre != "") {
         include('../script/utils.php');
         include('../script/bdd_livres_connect.php'); 
-        $sql = "SELECT Titre, DatePublication FROM Livres";
-        echo($sql);
+        $sql = "SELECT * FROM  LivresAuteurs LEFT JOIN Livres ON LivresAuteurs.IdLivres = Livres.titre";
         $result_search = executeQuery($connexion, $sql);
         if ($result_search->rowCount() > 0) {
             echo "<table>";
             foreach ($result_search as $row) {
-                echo "<tr>";
-                    echo "<td>" . $row["Titre"] . "</td>";
-                    echo "<td>" . $row["DatePublication"] . "</td>";
-                    echo "</tr>";
-                if ($titre == $row["Nom"]){
-                    echo "<tr>";
-                    echo "<td>" . $row["Titre"] . "</td>";
-                    echo "<td>" . $row["DatePublication"] . "</td>";
+                if ($titre == $row["Titre"]){
+                    echo "<td >" . $row["IdLivres"] . "</td>";
+                    echo "<td>" . "<br> " . "</td>";
+                    echo "<td>" . "<br>" . "</td>";
+                    echo "<td>" . $row["IdAuteurs"] . "</td>";
+                    echo "<td>" . "<br> " . "</td>";
+                    echo "<td>" . "<br>" . "</td>";
+                    echo "<td>" . $row["Editeur"] . "</td>";
                     echo "</tr>";
                 }
             }
             echo "</table>";
-        }
-
-       
+        }  
     }
-    else{
-        echo("Pas trouvé");
-    }
-    */
+    
 ?>
 
